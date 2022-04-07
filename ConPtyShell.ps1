@@ -1599,13 +1599,6 @@ public static class ConPtyShell
             FreeConsole();
         CloseHandle(childProcessInfo.hThread);
         CloseHandle(childProcessInfo.hProcess);
-        if (handlePseudoConsole != IntPtr.Zero) ClosePseudoConsole(handlePseudoConsole);
-        if (InputPipeWrite != IntPtr.Zero) CloseHandle(InputPipeWrite);
-        if (OutputPipeRead != IntPtr.Zero) CloseHandle(OutputPipeRead);
-        output += "Exception.\r\n";
-        return output;
-    }
-}
 
 public static class ConPtyShellMainClass
 {
