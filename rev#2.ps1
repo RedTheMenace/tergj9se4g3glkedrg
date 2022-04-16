@@ -1,0 +1,1 @@
+Start-Process powershell -verb runas -ArgumentList C:\ProgramData\zDATAxD\redtools.jar
